@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>To-Do List</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h1>To-Do List</h1>
+
+        <section class="entrada">
+            <form id="formTarefa">
+
+                <input
+                    type="text"
+                    id="campoEntrada"
+                    placeholder="Nome da tarefa..."
+                >
+
+                <button type="submit">
+                    Adicionar
+                </button>
+
+            </form>
+        </section>
+
+        <section class="tarefas">
+
+            <h2>Tarefas</h2>
+
+            <ul id="listaTarefas"></ul>
+
+        </section>
+
+    </main>
+
+    <dialog id="modalPropriedades" aria-labelledby="tituloModal">
+        <form method="dialog" id="formPropriedades">
+            <div class="cabecalho-modal">
+                <h2 id="tituloModal">Propriedades da tarefa</h2>
+                <button type="submit" class="btn-fechar" aria-label="Fechar propriedades">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+
+            <p id="nomeTarefaModal"></p>
+
+            <div class="campos-data">
+                <label for="dataInicio">Data de início</label>
+                <input type="date" id="dataInicio">
+
+                <label for="dataTermino">Data de término</label>
+                <input type="date" id="dataTermino">
+            </div>
+
+            <div class="acoes-modal">
+                <button type="button" id="btnCancelar">Cancelar</button>
+                <button type="button" id="btnSalvar">Salvar</button>
+            </div>
+        </form>
+    </dialog>
+
+</body>
+</html>
